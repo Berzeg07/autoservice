@@ -1,16 +1,99 @@
-.footer
-    p Футер
+footer.footer
+    .container
+        .footer__inner
+            .footer__item
+                ul.footer-contact
+                    li
+                        span Ремонт замков 
+                        br
+                        b Зажигания
+                    li
+                        a(href="tel:74951352345") +7 (495) 135-23-45
+                    li
+                        span Москва, 
+                            br 
+                            |Большой Каретный переулок, 2
+                    li
+                        span Пн-Пт 9:00 20:00
+
+                .payment
+                    span Доступные способы оплаты
+                    ul.payment-img
+                        li
+                            img(src="img/visa.png")
+                        li
+                            img(src="img/mir.png")
+                        li
+                            img(src="img/paypal.png")
+                        li                      
+                            img(src="img/halva.png")
+
+            .footer__item
+                form.footer-search(action="#")
+                    input(type="text")
+                    button(type="submit").btn-yellow Найти 
+                .link-list
+                    .link-list__title Услуги по ремонту замков зажигания
+                    .link-list__inner
+                        ul
+                            li
+                                a(href="#").link-list__repair Ремонт замка зажигания
+                            li
+                                a(href="#").link-list__replace Замена замка зажигания
+                            li
+                                a(href="#").link-list__cylinder Замена личинки замка зажигания
+                            li
+                                a(href="#").link-list__switcher Переборка замка зажигания
+                            li
+                                a(href="#").link-list__group Ремонт контактной группы
+                            li
+                                a(href="#").link-list__insert Замена вставки замка зажигания
+                        ul
+                            li
+                                a(href="#").link-list__repair Ремонт замка зажигания
+                            li
+                                a(href="#").link-list__replace Замена замка зажигания
+                            li
+                                a(href="#").link-list__cylinder Замена личинки замка зажигания
+                            li
+                                a(href="#").link-list__switcher Переборка замка зажигания
+                            li
+                                a(href="#").link-list__group Ремонт контактной группы
+                            li
+                                a(href="#").link-list__insert Замена вставки замка зажигания
+            .footer__item.footer__item_info
+                button(type="button").btn-yellow.btn-yellow_footer Вызвать мастера
+                .link-list
+                    .link-list__title Информация
+                    ul
+                        li
+                            a(href="#").link-list__services Услуги
+                        li
+                            a(href="#").link-list__price Цены на ремонт
+                        li
+                            a(href="#").link-list__photo Фото работ
+                        li
+                            a(href="#").link-list__testemonials Отзывы
+                        li
+                            a(href="#").link-list__contact Контакты
+                        li
+                            a(href="#").link-list__writeus Напишите нам                    
 
 
-    //- fieldset{
-    //-       border-radius: 0 50px 50px 0;
-    //-       border: 2px solid orange;
-    //-       padding: 30px;
-    //-       width: 600px;
-    //-     }
-    //-     legend{
-    //-       color: orange;
-    //-     }
+        .copyright
+            .copyright-item
+                | 2009-2019 Ремонт замков зажигания          
+            .copyright-item
+                ul.development
+                    li
+                        |Создание и продвижение
+                    li   
+                        img(src="img/dev-logo.png")
+            .copyright-item
+                .capcha
+                    img(src="img/capcha.png")
+
+
 
 include ./footer-modals.pug
 script(src="libs/jquery/jquery-3.4.1.min.js")
