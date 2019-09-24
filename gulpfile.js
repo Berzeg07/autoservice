@@ -33,6 +33,11 @@ $.gulp.task('default',$.gulp.series(
     $.gulp.parallel('watch','serve')
 ));
 
+$.gulp.task('watch',$.gulp.series(
+    $.gulp.parallel('pug','sass','scripts:lib','scripts','img','fonts', 'svg'),
+    $.gulp.parallel('watch')
+));
+
 $.gulp.task('build',$.gulp.series(
     $.gulp.parallel('pug','sass','scripts:lib','scripts','img','fonts', 'svg')
 ));

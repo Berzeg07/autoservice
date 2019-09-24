@@ -1,1 +1,31 @@
-p Контент
+.banner                
+    .container
+        form.search-master(action="#")
+            .search-master__title 
+                span Срочный ремонт замка зажигания
+                br
+                b с выездом в Москве
+            fieldset.search
+                legend Поиск автомастера                                         
+                .search-inner
+                    .search-item
+                        .select-custom
+                            select
+                                option Выберите неисправность
+                                option Тест
+                                option Тест
+                    .search-item
+                        .select-custom
+                            select
+                                option Выберите марку
+                                option BMW
+                                option Mazda
+                    .search-item
+                        .select-custom
+                            select
+                                option Выберите модель
+                                option Тест
+                                option Тест
+                    .search-item
+                        button(type="submit").search__btn 
+                            span Найти
