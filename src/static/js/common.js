@@ -75,4 +75,66 @@ $(document).ready(function() {
         }
     });
 
+    // photo slider *
+    var photoSlider = $(".photo-slider");
+    photoSlider.owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: false,
+        smartSpeed: 1000,
+        margin: 24,
+        center: false,
+        navText: ['<span class="nav-left"></span>', '<span class="nav-right"></span>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            }
+        }
+    });
+
+    // map Yandex *
+    ymaps.ready(init);
+
+    function init() {
+        var center = [55.753220, 37.715471];
+        var myMap = new ymaps.Map('map', {
+            center: center,
+            controls: [],
+            zoom: 10
+        }, {
+            searchControlProvider: 'yandex#search'
+
+        });
+
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            var zoomControl = new ymaps.control.ZoomControl({
+                options: {
+                    size: "small"
+                }
+            });
+            myMap.controls.add(zoomControl, {
+                position: {
+                    right: '40px',
+                    top: '180px'
+                }
+            });
+        }
+
+        myMap.behaviors.disable('scrollZoom');
+    }
+
+
+
+
+
+
+
+
+
 });
