@@ -11,24 +11,23 @@ main
                     .search-inner
                         .search-item
                             .select-custom
-                                select
-                                    option Выберите неисправность
-                                    option Тест
-                                    option Тест
+                                select#selectBroken
+                                    option(value="Заголовок") Выберите неисправность
+                                    option(value="/remont-zamka-zaziganiya/") Ремонт замка зажигания
+                                    option(value="/zamena-zamka-zaziganiya/") Замена замка зажигания
                         .search-item
                             .select-custom
-                                select
-                                    option Выберите марку
-                                    option BMW
-                                    option Mazda
+                                select#selectMark
+                                    option(value="Заголовок") Выберите марку
+                                    option(value="Audi") Audi
+                                    option(value="BMW") BMW
                         .search-item
                             .select-custom
-                                select
-                                    option Выберите модель
-                                    option Тест
-                                    option Тест
+                                select#selectModel
+                                    option(value="Заголовок") Выберите модель
+                                    option(value="Заголовок") Выберите модель
                         .search-item
-                            button(type="submit").search__btn 
+                            button(type="button").search__btn#urlBtn 
                                 span Найти
     .container
         include ./breadcrumbs.pug
@@ -339,7 +338,8 @@ main
                 span Расчет времени прибытия автомастера        
             .arrival-calc__street Авиамоторная, 12
             label
-                input(type="text")
+                input(type="text" placeholder="Жмите иконку для расчета времени").time-inp
+                button(type="button").arrival-btn#arrivalBtn   
     
     .request
         h2.main-title Онлайн заявка на ремонт замка зажигания

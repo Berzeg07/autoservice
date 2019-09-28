@@ -1,6 +1,7 @@
 .overlay
 .modal.price-total
     form(action="#")
+        .close-icon
         .price-total__title 
             span Ориентировочная стоимость ремонта: 
                 i 6 000 руб.
@@ -9,15 +10,18 @@
                 img(src="img/promo-photo.png")
             .price-total__info
                 .about-work
-                    |У Audi A8 в замке зажигания есть 3 типовых неисправности, по какому номеру мастер может связатся с вами и уточнить детали:            
+                    |У 
+                    span Audi 
+                    i A8  
+                    |в замке зажигания есть 3 типовых неисправности, по какому номеру мастер может связатся с вами и уточнить детали:            
                 .price-total__mess
                     .price-total__btn
                         label
                             input(type="text" placeholder="Телефон для связи")
                         button.btn-cont(type="submit") Связаться с мастером
                         .price-total__check
-                            input(type="checkbox").checkprivacy#checkprivacy
-                            label(for="checktotal") Я согласен на обработку персональных данных 
+                            input(type="checkbox" checked).checkprivacy#checkprivacy
+                            label(for="checkprivacy") Я согласен на обработку персональных данных 
                     .price-total__textarea
                         textarea
                             |Комментарий              
